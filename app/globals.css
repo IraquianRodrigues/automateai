@@ -127,22 +127,24 @@
   }
 }
 
-/* Custom scrollbar */
-@layer utilities {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+/* Particles canvas styling */
+#tsparticles,
+#tsparticles-hero {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #0f172a;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #a855f7 0%, #06b6d4 100%);
-    border-radius: 5px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #9333ea 0%, #0ea5e9 100%);
-  }
+#tsparticles canvas,
+#tsparticles-hero canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
 }

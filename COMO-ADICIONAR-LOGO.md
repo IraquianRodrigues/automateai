@@ -232,3 +232,6 @@ Para tamanhos diferentes em mobile e desktop:
 
 **Precisa de ajuda?** Consulte a documentação do [Next.js Image](https://nextjs.org/docs/app/api-reference/components/image)
 
+
+
+

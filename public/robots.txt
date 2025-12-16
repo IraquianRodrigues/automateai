@@ -23,3 +23,6 @@ Allow: /#contato
 # Crawl-delay
 Crawl-delay: 1
 
+
+
+
