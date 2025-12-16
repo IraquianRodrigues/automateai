@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AutomateAI Tech Solutions 🚀
 
-## Getting Started
+Site corporativo moderno para a AutomateAI, empresa especializada em automação inteligente e soluções tecnológicas.
 
-First, run the development server:
+## 🎨 Design
+
+O site foi desenvolvido com uma paleta de cores moderna baseada no logo da empresa:
+- **Primária**: Roxo/Magenta (#A855F7, #9333EA)
+- **Secundária**: Ciano/Azul (#06B6D4, #0EA5E9)
+- **Background**: Dark (#0F172A, #1E293B)
+- Gradientes suaves de roxo para ciano
+
+## ✨ Características
+
+- ✅ Design moderno e responsivo
+- ✅ Animações suaves com Framer Motion
+- ✅ Paleta de cores baseada na identidade visual
+- ✅ Scroll suave entre seções
+- ✅ Formulário de contato integrado com WhatsApp
+- ✅ Componentes interativos
+- ✅ Otimizado para SEO
+
+## 📋 Seções do Site
+
+1. **Hero Section** - Apresentação impactante com CTA
+2. **Serviços** - Cards interativos com os principais serviços:
+   - Automação de Agendamentos para Clínicas
+   - Suporte WhatsApp & Captura de Leads
+   - Automação de Planilhas
+   - Soluções Personalizadas
+3. **Sobre Nós** - Missão, visão e valores da empresa
+4. **Como Funciona** - Processo em 4 etapas
+5. **Benefícios** - Vantagens da automação
+6. **FAQ** - Perguntas frequentes
+7. **Contato** - Formulário e informações de contato
+8. **Footer** - Links e redes sociais
+
+## 🛠️ Tecnologias
+
+- **Next.js 14** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 4** - Estilização
+- **Framer Motion** - Animações
+- **React Icons** - Ícones
+- **Shadcn/ui** - Componentes
+
+## 🚀 Como Usar
+
+### Instalação
+
+```bash
+npm install
+```
+
+### Desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build de Produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## ⚙️ Configuração
 
-To learn more about Next.js, take a look at the following resources:
+### Atualizar informações de contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edite os seguintes arquivos para adicionar suas informações:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **components/Contact.tsx** - Linha 52
+   - Substitua `seu-numero` pelo seu número do WhatsApp (formato: 5511999999999)
 
-## Deploy on Vercel
+2. **components/Hero.tsx** - Linha 95
+   - Atualize o link do WhatsApp
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **components/Footer.tsx**
+   - Atualize os links das redes sociais
+   - Adicione email e telefone
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Personalizar conteúdo
+
+Todos os textos podem ser editados nos componentes em `components/`:
+- `Hero.tsx` - Título e subtítulo principal
+- `Services.tsx` - Descrição dos serviços
+- `About.tsx` - Sobre a empresa
+- `FAQ.tsx` - Perguntas e respostas
+
+## 📱 Responsividade
+
+O site é totalmente responsivo e funciona perfeitamente em:
+- 📱 Dispositivos móveis
+- 📱 Tablets
+- 💻 Desktops
+- 🖥️ Monitores grandes
+
+## 🎯 SEO
+
+Para otimizar o SEO, edite o arquivo `app/layout.tsx` e adicione:
+- Título da página
+- Meta descrição
+- Open Graph tags
+- Favicon personalizado
+
+## 📄 Licença
+
+© 2024 AutomateAI Tech Solutions. Todos os direitos reservados.
+
+---
+
+Desenvolvido com ❤ para revolucionar negócios através da automação
