@@ -72,7 +72,7 @@ Olá! Vim através do site AutomateAI.
       `.trim();
       
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/5584999642564?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/5584996735293?text=${encodedMessage}`;
       
       // Rastrear clique no WhatsApp
       analytics.whatsappClick('Contact Form');
@@ -95,8 +95,8 @@ Olá! Vim através do site AutomateAI.
     {
       icon: FaWhatsapp,
       title: 'WhatsApp',
-      content: '+55 (84) 99964-2564',
-      link: 'https://wa.me/5584999642564',
+      content: '+55 (84) 99673-5293',
+      link: 'https://wa.me/5584996735293',
       color: 'from-green-500 to-emerald-500',
     },
     {

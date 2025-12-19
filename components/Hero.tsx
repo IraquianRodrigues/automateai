@@ -221,7 +221,7 @@ export default function Hero() {
               Comece Agora
             </a>
             <a
-              href="https://wa.me/5584999642564"
+              href="https://wa.me/5584996735293"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-8 py-4 bg-transparent border-2 border-purple-500 text-white font-semibold rounded-full text-lg hover:bg-purple-500/10 transition-all duration-300 flex items-center gap-2"
@@ -229,24 +229,6 @@ export default function Hero() {
               <FaWhatsapp className="text-2xl group-hover:scale-110 transition-transform" />
               Fale no WhatsApp
             </a>
-          </motion.div>
-
-          {/* Scroll indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-20"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="inline-block"
-            >
-              <div className="w-6 h-10 border-2 border-purple-400 rounded-full flex justify-center">
-                <div className="w-1.5 h-3 bg-purple-400 rounded-full mt-2" />
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

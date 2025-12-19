@@ -36,7 +36,7 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FaWhatsapp, href: 'https://wa.me/5584999642564', color: 'hover:text-green-400' },
+    { icon: FaWhatsapp, href: 'https://wa.me/5584996735293', color: 'hover:text-green-400' },
     { icon: FaInstagram, href: 'https://instagram.com/automateai', color: 'hover:text-pink-400' },
     { icon: FaLinkedin, href: 'https://linkedin.com/company/automateai', color: 'hover:text-blue-400' },
     { icon: FaFacebook, href: 'https://facebook.com/automateai', color: 'hover:text-blue-500' },

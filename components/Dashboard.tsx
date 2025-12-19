@@ -10,7 +10,7 @@ const dashboards = [
     id: 1,
     title: 'Dashboard de Agendamentos',
     description: 'Acompanhe todos os agendamentos, confirmações, cancelamentos e estatísticas em tempo real.',
-    image: '/dashboard-agendamento.png', // Coloque sua imagem aqui
+    image: '/novo dash.png', // Coloque sua imagem aqui
     icon: FaCalendarAlt,
     features: [
       'Visualização em tempo real',
@@ -24,7 +24,7 @@ const dashboards = [
     id: 2,
     title: 'Dashboard WhatsApp & Leads',
     description: 'Monitore conversas, leads capturados, taxa de conversão e performance do atendimento automático.',
-    image: '/dashboard-whatsapp-leads.png', // Coloque sua imagem aqui
+    image: '/wpp dashboard.png', // Coloque sua imagem aqui
     icon: FaWhatsapp,
     features: [
       'Conversas em andamento',
@@ -234,6 +234,12 @@ export default function Dashboard() {
     </>
   );
 }
+
+
+
+
+
+
 
 
 

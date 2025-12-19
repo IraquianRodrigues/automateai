@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/dashboard-agendamento.png",
+        url: "/novo dash.png",
         width: 1920,
         height: 1080,
         alt: "Dashboard AutomateAI - Agendamentos",
       },
       {
-        url: "/dashboard-whatsapp-leads.png",
+        url: "/wpp dashboard.png",
         width: 1920,
         height: 1080,
         alt: "Dashboard AutomateAI - WhatsApp e Leads",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AutomateAI - Funcionários Digitais 24h",
     description: "Automação inteligente para sua empresa. Dashboards em tempo real, WhatsApp, agendamentos e mais.",
-    images: ["/dashboard-agendamento.png"],
+    images: ["/novo dash.png"],
   },
   alternates: {
     canonical: "https://seu-site.com.br",
@@ -76,7 +76,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Google Analytics - Substitua G-XXXXXXXXXX pelo seu ID */}
-        <GoogleAnalytics gaId="G-377865447" />
+        <GoogleAnalytics gaId="G-STFM7K17LC" />
         {children}
       </body>
     </html>

@@ -168,7 +168,7 @@ export default function Privacidade() {
               <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
                 <p className="mb-2"><strong className="text-white">AutomateAI Tech Solutions</strong></p>
                 <p className="mb-2">Email: automateai@workflown8n.com.br</p>
-                <p className="mb-2">WhatsApp: (84) 99964-2564</p>
+                <p className="mb-2">WhatsApp: (84) 99673-5293</p>
                 <p>Localização: Mossoró - RN</p>
               </div>
             </section>
@@ -189,6 +189,12 @@ export default function Privacidade() {
     </div>
   );
 }
+
+
+
+
+
+
 
 
 
