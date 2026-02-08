@@ -1,6 +1,10 @@
 'use client';
 
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import { motion, useScroll, useTransform } from 'framer-motion';
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -8,6 +12,10 @@ const navLinks = [
   { name: 'Início', href: '#' },
   { name: 'Serviços', href: '#servicos' },
   { name: 'Sobre', href: '#sobre' },
+<<<<<<< HEAD
+=======
+  { name: 'Dashboard', href: '#dashboard' },
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
   { name: 'Como Funciona', href: '#como-funciona' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Contato', href: '#contato' },
@@ -16,16 +24,29 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+<<<<<<< HEAD
   
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+=======
+  const { scrollY } = useScroll();
+  
+  // Detectar scroll para mudar estilo do navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
     };
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
+=======
+  // Fechar menu mobile ao clicar em um link
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -35,15 +56,24 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
+<<<<<<< HEAD
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled 
             ? 'bg-[#020617]/80 backdrop-blur-md border-b border-[#1e293b] shadow-lg shadow-[#06b6d4]/5' 
             : 'bg-transparent border-b border-transparent'
+=======
+        transition={{ duration: 0.5 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled 
+            ? 'bg-slate-950/95 backdrop-blur-lg shadow-lg shadow-purple-500/10 border-b border-purple-500/20' 
+            : 'bg-transparent'
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
         }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
+<<<<<<< HEAD
             {/* Logo - Tech Gradient */}
             <motion.a
               href="#"
@@ -72,10 +102,29 @@ export default function Navbar() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-1">
+=======
+            {/* Logo */}
+            <motion.a
+              href="#"
+              className="flex items-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <h1 className="text-2xl font-bold">
+                <span className="bg-linear-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+                  AutomateAI
+                </span>
+              </h1>
+            </motion.a>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center gap-8">
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
               {navLinks.map((link, index) => (
                 <motion.a
                   key={index}
                   href={link.href}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
@@ -96,6 +145,27 @@ export default function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="ml-6 px-6 py-2.5 rounded-lg bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] text-white font-bold text-sm shadow-[0_0_15px_-3px_rgba(6,182,212,0.6)] hover:shadow-[0_0_20px_0px_rgba(139,92,246,0.6)] transition-all duration-300 border border-white/10"
+=======
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+                >
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-purple-400 to-cyan-400 group-hover:w-full transition-all duration-300" />
+                </motion.a>
+              ))}
+              
+              {/* CTA Button */}
+              <motion.a
+                href="#contato"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2.5 bg-linear-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
               >
                 Começar Agora
               </motion.a>
@@ -105,7 +175,11 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
               className="lg:hidden text-[#F5F5F0] text-2xl z-50 p-2 hover:text-[#06b6d4] transition-colors"
+=======
+              className="lg:hidden text-white text-2xl z-50"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
               aria-label="Toggle menu"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
@@ -117,6 +191,7 @@ export default function Navbar() {
         <motion.div
           initial={false}
           animate={{
+<<<<<<< HEAD
             height: isOpen ? '100vh' : 0,
             opacity: isOpen ? 1 : 0,
           }}
@@ -124,15 +199,31 @@ export default function Navbar() {
           className="lg:hidden fixed inset-0 top-0 left-0 w-full bg-[#020617]/95 backdrop-blur-xl z-40 overflow-hidden flex flex-col justify-center items-center"
         >
           <div className="w-full max-w-md px-6 space-y-6">
+=======
+            height: isOpen ? 'auto' : 0,
+            opacity: isOpen ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+          className="lg:hidden overflow-hidden bg-slate-950/98 backdrop-blur-lg border-t border-purple-500/20"
+        >
+          <div className="container mx-auto px-4 py-6 space-y-4">
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
             {navLinks.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
                 onClick={handleLinkClick}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 20 }}
                 transition={{ duration: 0.3, delay: 0.1 + index * 0.05 }}
                 className="block text-center text-2xl font-medium text-[#94a3b8] hover:text-white hover:scale-105 transition-all duration-200"
+=======
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="block text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 py-2"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
               >
                 {link.name}
               </motion.a>
@@ -144,13 +235,27 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 20 }}
               transition={{ duration: 0.3, delay: 0.4 }}
+<<<<<<< HEAD
               className="block w-full text-center px-8 py-4 mt-8 rounded-xl bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] text-white font-bold text-lg shadow-lg shadow-[#06b6d4]/20"
+=======
+              className="block text-center px-6 py-3 bg-linear-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-full mt-4"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
             >
               Começar Agora
             </motion.a>
           </div>
         </motion.div>
       </motion.nav>
+<<<<<<< HEAD
     </>
   );
 }
+=======
+
+      {/* Spacer para não cobrir o conteúdo */}
+      <div className="h-20" />
+    </>
+  );
+}
+
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361

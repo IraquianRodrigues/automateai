@@ -2,7 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+<<<<<<< HEAD
 import { FaPlus, FaMinus } from 'react-icons/fa';
+=======
+import { FaChevronDown } from 'react-icons/fa';
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
 
 const faqs = [
   {
@@ -32,6 +36,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
+<<<<<<< HEAD
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -124,17 +129,100 @@ export default function FAQ() {
         </div>
 
         {/* Mobile CTA */}
+=======
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <section id="faq" className="py-24 bg-slate-950">
+      <div className="container mx-auto px-4">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            Perguntas <span className="bg-linear-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">Frequentes</span>
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Tire suas dúvidas sobre nossos serviços
+          </p>
+        </motion.div>
+
+        {/* FAQ items */}
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <div
+                className={`bg-slate-900/50 backdrop-blur-sm border rounded-xl overflow-hidden transition-all duration-300 ${
+                  openIndex === index
+                    ? 'border-purple-500/50'
+                    : 'border-slate-800 hover:border-slate-700'
+                }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/50 transition-colors duration-200"
+                >
+                  <span className="text-lg font-semibold text-white pr-4">
+                    {faq.question}
+                  </span>
+                  <motion.div
+                    animate={{ rotate: openIndex === index ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FaChevronDown className="text-purple-400 text-xl flex-shrink-0" />
+                  </motion.div>
+                </button>
+                
+                <motion.div
+                  initial={false}
+                  animate={{
+                    height: openIndex === index ? 'auto' : 0,
+                    opacity: openIndex === index ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-6 pb-5 text-gray-400 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA */}
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
+<<<<<<< HEAD
           className="text-center mt-12 lg:hidden"
         >
           <p className="text-[#64748b] mb-4">Ainda tem dúvidas?</p>
           <a
             href="#contato"
             className="inline-flex items-center px-8 py-3 rounded-xl bg-[#06b6d4] text-[#020617] font-bold"
+=======
+          className="text-center mt-12"
+        >
+          <p className="text-gray-400 mb-4 text-lg">Ainda tem dúvidas?</p>
+          <a
+            href="#contato"
+            className="inline-flex items-center px-8 py-3 bg-linear-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/50"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
           >
             Entre em Contato
           </a>
@@ -143,3 +231,7 @@ export default function FAQ() {
     </section>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361

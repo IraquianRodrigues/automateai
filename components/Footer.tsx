@@ -1,7 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+=======
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook, FaEnvelope, FaPhone } from 'react-icons/fa';
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,13 +33,19 @@ export default function Footer() {
       title: 'Contato',
       links: [
         { name: 'Entre em Contato', href: '#contato' },
+<<<<<<< HEAD
         { name: 'WhatsApp', href: 'https://wa.me/5584996735293' },
         { name: 'Email', href: 'mailto:automateai@workflown8n.com.br' },
+=======
+        { name: 'WhatsApp', href: 'https://wa.me/seu-numero' },
+        { name: 'Email', href: 'mailto:contato@automateai.com.br' },
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
       ],
     },
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
     { icon: FaWhatsapp, href: 'https://wa.me/5584996735293', label: 'WhatsApp' },
     { icon: FaInstagram, href: 'https://instagram.com/automateai', label: 'Instagram' },
     { icon: FaLinkedin, href: 'https://linkedin.com/company/automateai', label: 'LinkedIn' },
@@ -49,6 +59,18 @@ export default function Footer() {
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+=======
+    { icon: FaWhatsapp, href: 'https://wa.me/5584996735293', color: 'hover:text-green-400' },
+    { icon: FaInstagram, href: 'https://instagram.com/automateai', color: 'hover:text-pink-400' },
+    { icon: FaLinkedin, href: 'https://linkedin.com/company/automateai', color: 'hover:text-blue-400' },
+    { icon: FaFacebook, href: 'https://facebook.com/automateai', color: 'hover:text-blue-500' },
+  ];
+
+  return (
+    <footer className="bg-slate-950 border-t border-slate-800">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
           {/* Brand section */}
           <div className="lg:col-span-2">
             <motion.div
@@ -57,6 +79,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
               {/* Logo */}
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#06b6d4] to-[#8b5cf6] p-[1px] mr-3">
@@ -81,18 +104,40 @@ export default function Footer() {
               
               {/* Social links */}
               <div className="flex gap-3">
+=======
+              <h3 className="text-3xl font-bold mb-4">
+                <span className="bg-linear-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+                  AutomateAI
+                </span>
+              </h3>
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Transformando negócios através de automação inteligente e 
+                soluções tecnológicas inovadoras.
+              </p>
+              
+              {/* Social links */}
+              <div className="flex gap-4">
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
                     aria-label={social.label}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 rounded-lg border border-[#1e293b] bg-[#0f172a] flex items-center justify-center text-[#94a3b8] hover:border-[#06b6d4] hover:text-[#06b6d4] transition-all duration-300"
                   >
                     <social.icon className="text-lg" />
+=======
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-gray-400 ${social.color} transition-colors duration-300`}
+                  >
+                    <social.icon className="text-xl" />
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
                   </motion.a>
                 ))}
               </div>
@@ -108,15 +153,26 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
+<<<<<<< HEAD
               <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">
                 {section.title}
               </h4>
               <ul className="space-y-3">
+=======
+              <h4 className="text-white font-bold text-lg mb-4">
+                {section.title}
+              </h4>
+              <ul className="space-y-2">
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
                       href={link.href}
+<<<<<<< HEAD
                       className="text-[#94a3b8] hover:text-[#06b6d4] transition-colors duration-200 text-sm"
+=======
+                      className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
                     >
                       {link.name}
                     </a>
@@ -128,6 +184,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
+<<<<<<< HEAD
         <div className="pt-8 border-t border-[#1e293b]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#64748b] text-sm text-center md:text-left">
@@ -148,7 +205,53 @@ export default function Footer() {
             Mossoró-RN • Brasil
           </p>
         </div>
+=======
+        <div className="pt-8 border-t border-slate-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-gray-400 text-center md:text-left"
+            >
+              © {currentYear} AutomateAI Tech Solutions. Todos os direitos reservados.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex gap-6 text-sm"
+            >
+              <a href="/privacidade" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                Política de Privacidade
+              </a>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Made with love */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center mt-8"
+        >
+          <p className="text-gray-500 text-sm">
+            Feito com{' '}
+            <span className="text-purple-400">❤</span>
+            {' '}para revolucionar seu negócio
+          </p>
+        </motion.div>
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
       </div>
     </footer>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ca29a7a3916c1e3aa478aaae2aefaaba2dcc361
