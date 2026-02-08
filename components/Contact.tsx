@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -51,6 +51,7 @@ export default function Contact() {
         setSubmitStatus('error');
       }
     } else {
+      // Enviar por WHATSAPP
       const whatsappMessage = `
 Olá! Vim através do site AutomateAI.
 
@@ -143,7 +144,7 @@ Olá! Vim através do site AutomateAI.
                   className="flex items-center gap-4 p-5 bg-[#0f172a] border border-[#1e293b] rounded-xl hover:border-[#06b6d4]/50 transition-colors duration-300 group shadow-lg"
                 >
                   <div 
-                    className="w-12 h-12 rounded-lg border  flex items-center justify-center transition-colors duration-300 bg-[#020617]"
+                    className="w-12 h-12 rounded-lg border flex items-center justify-center transition-colors duration-300 bg-[#020617]"
                     style={{ borderColor: `${info.color}40`, color: info.color }}
                   >
                     <info.icon className="text-xl" />

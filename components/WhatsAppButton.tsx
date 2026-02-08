@@ -1,7 +1,6 @@
-'use client';
+﻿'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';import { FaWhatsapp } from 'react-icons/fa';
 
 export default function WhatsAppButton() {
   return (

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaWhatsapp, FaTable, FaCog, FaArrowRight } from 'react-icons/fa';
@@ -23,14 +23,14 @@ const services = [
     title: 'Automação de Planilhas',
     description: 'Automatize relatórios, análises e processamento de dados. Economize horas de trabalho manual.',
     features: ['Relatórios automáticos', 'Análise de dados', 'Integração com sistemas'],
-    accent: '#ec4899', // Pink accent for variety, fits the tech theme
+    accent: '#ec4899',
   },
   {
     icon: FaCog,
     title: 'Soluções Personalizadas',
     description: 'Desenvolvemos automações sob medida para as necessidades específicas do seu negócio.',
     features: ['Análise personalizada', 'Desenvolvimento exclusivo', 'Suporte dedicado'],
-    accent: '#10b981', // Emerald for "Custom/Success" vibe
+    accent: '#10b981',
   },
 ];
 

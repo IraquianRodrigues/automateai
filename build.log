@@ -1,0 +1,302 @@
+﻿
+> automateai@0.1.0 build
+> next build
+
+node.exe : 
+[baseline-browser-mapping] The 
+data in this module is over two 
+months old.  To ensure accurate 
+Baseline data, please update: 
+`npm i 
+baseline-browser-mapping@latest 
+-D`
+No linha:1 caractere:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : N 
+   otSpecified: ([baseline-bro  
+  ws...ping@latest -D`:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorId : N 
+   ativeCommandError
+ 
+   Ôû▓ Next.js 16.0.10 (Turbopack)
+
+   Creating an optimized production build ...
+[baseline-browser-mapping] The 
+data in this module is over two 
+months old.  To ensure accurate 
+Baseline data, please update: 
+`npm i 
+baseline-browser-mapping@latest 
+-D`
+
+> Build error occurred
+Error: Turbopack build failed 
+with 6 errors:
+./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: C:\Users\iraquia
+n\automateai-main\app\globals.cs
+s:19:9: Unknown word HEAD
+    at Input.error (node_modules
+/postcss/lib/input.js:135:16) [C
+:\Users\iraquian\automateai-main
+\.next\build\chunks\node_modules
+_fe693df6._.js:4651:22]
+    at Parser.unknownWord (node_
+modules/postcss/lib/parser.js:59
+5:22) [C:\Users\iraquian\automat
+eai-main\.next\build\chunks\node
+_modules_fe693df6._.js:5827:26]
+    at Parser.decl (node_modules
+/postcss/lib/parser.js:236:16) [
+C:\Users\iraquian\automateai-mai
+n\.next\build\chunks\node_module
+s_fe693df6._.js:5510:26]
+    at Parser.other (node_module
+s/postcss/lib/parser.js:401:18) 
+[C:\Users\iraquian\automateai-ma
+in\.next\build\chunks\node_modul
+es_fe693df6._.js:5656:30]
+    at Parser.parse (node_module
+s/postcss/lib/parser.js:472:16) 
+[C:\Users\iraquian\automateai-ma
+in\.next\build\chunks\node_modul
+es_fe693df6._.js:5716:26]
+    at parse (node_modules/postc
+ss/lib/parse.js:11:12) [C:\Users
+\iraquian\automateai-main\.next\
+build\chunks\node_modules_fe693d
+f6._.js:5853:16]
+    at new LazyResult (node_modu
+les/postcss/lib/lazy-result.js:1
+65:16) [C:\Users\iraquian\automa
+teai-main\.next\build\chunks\nod
+e_modules_fe693df6._.js:6105:24]
+    at Processor.process (node_m
+odules/postcss/lib/processor.js:
+53:14) [C:\Users\iraquian\automa
+teai-main\.next\build\chunks\nod
+e_modules_fe693df6._.js:6572:20]
+    at transform (turbopack:///[
+turbopack-node]/transforms/postc
+ss.ts:70:51) [C:\Users\iraquian\
+automateai-main\.next\build\chun
+ks\[root-of-the-server]__51225da
+f._.js:146:52]
+    at run (turbopack:///[turbop
+ack-node]/ipc/evaluate.ts:92:29)
+ [C:\Users\iraquian\automateai-m
+ain\.next\build\chunks\[root-of-
+the-server]__974941ed._.js:443:3
+7]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client 
+Component Browser]
+    ./app/layout.tsx [Server 
+Component]
+
+
+./app/page.tsx:29:2
+Parsing ecmascript source code 
+failed
+[0m [90m 27 |[39m         
+[33m<[39m[33mHero[39m 
+[33m/[39m[33m>[39m
+ [90m 28 |[39m         
+[33m<[39m[33mServices[39m 
+[33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 29 
+|[39m [33m<<[39m[33m<<[39m
+[33m<<[39m[33m<[39m 
+[33mHEAD[39m
+ [90m    |[39m  [31m[1m^[22
+m[39m[31m[1m^[22m[39m
+ [90m 30 |[39m         
+[33m<[39m[33mFeatures[39m 
+[33m/[39m[33m>[39m
+ [90m 31 |[39m         
+[33m<[39m[33mAbout[39m 
+[33m/[39m[33m>[39m
+ [90m 32 |[39m [33m===[39m[
+33m===[39m[33m=[39m[0m
+
+Expression expected
+
+
+./app/page.tsx:29:4
+Parsing ecmascript source code 
+failed
+[0m [90m 27 |[39m         
+[33m<[39m[33mHero[39m 
+[33m/[39m[33m>[39m
+ [90m 28 |[39m         
+[33m<[39m[33mServices[39m 
+[33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 29 
+|[39m [33m<<[39m[33m<<[39m
+[33m<<[39m[33m<[39m 
+[33mHEAD[39m
+ [90m    |[39m    [31m[1m^[
+22m[39m[31m[1m^[22m[39m
+ [90m 30 |[39m         
+[33m<[39m[33mFeatures[39m 
+[33m/[39m[33m>[39m
+ [90m 31 |[39m         
+[33m<[39m[33mAbout[39m 
+[33m/[39m[33m>[39m
+ [90m 32 |[39m [33m===[39m[
+33m===[39m[33m=[39m[0m
+
+Expression expected
+
+
+./app/page.tsx:5:1
+Parsing ecmascript source code 
+failed
+[0m [90m 3 |[39m 
+[36mimport[39m [33mHero[39m 
+[36mfrom[39m [32m'@/component
+s/Hero'[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mServices[39m 
+[36mfrom[39m [32m'@/component
+s/Services'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 
+|[39m [33m<<[39m[33m<<[39m
+[33m<<[39m[33m<[39m 
+[33mHEAD[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mFeatures[39m 
+[36mfrom[39m [32m'@/component
+s/Features'[39m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m 
+[33mAbout[39m [36mfrom[39m 
+[32m'@/components/About'[39m[3
+3m;[39m
+ [90m 8 |[39m [33m===[39m[3
+3m===[39m[33m=[39m[0m
+
+Merge conflict marker 
+encountered.
+
+
+./app/page.tsx:8:1
+Parsing ecmascript source code 
+failed
+[0m [90m  6 |[39m 
+[36mimport[39m 
+[33mFeatures[39m 
+[36mfrom[39m [32m'@/component
+s/Features'[39m[33m;[39m
+ [90m  7 |[39m 
+[36mimport[39m 
+[33mAbout[39m [36mfrom[39m 
+[32m'@/components/About'[39m[3
+3m;[39m
+[31m[1m>[22m[39m[90m  8 
+|[39m [33m===[39m[33m===[39
+m[33m=[39m
+ [90m    |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m 
+[36mimport[39m 
+[33mAbout[39m [36mfrom[39m 
+[32m'@/components/About'[39m[3
+3m;[39m
+ [90m 10 |[39m 
+[36mimport[39m 
+[33mDashboard[39m 
+[36mfrom[39m [32m'@/component
+s/Dashboard'[39m[33m;[39m
+ [90m 11 |[39m [33m>>>[39m[
+33m>>>[39m[33m>[39m [35m5[3
+9mca29a7a3916c1e3aa478aaae2aefaa
+ba2dcc361[0m
+
+Merge conflict marker 
+encountered.
+
+
+./app/page.tsx:11:1
+Parsing ecmascript source code 
+failed
+[0m [90m  9 |[39m 
+[36mimport[39m 
+[33mAbout[39m [36mfrom[39m 
+[32m'@/components/About'[39m[3
+3m;[39m
+ [90m 10 |[39m 
+[36mimport[39m 
+[33mDashboard[39m 
+[36mfrom[39m [32m'@/component
+s/Dashboard'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 11 
+|[39m [33m>>>[39m[33m>>>[39
+m[33m>[39m [35m5[39mca29a7a3
+916c1e3aa478aaae2aefaaba2dcc361
+ [90m    |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+ [90m 12 |[39m 
+[36mimport[39m 
+[33mHowItWorks[39m 
+[36mfrom[39m [32m'@/component
+s/HowItWorks'[39m[33m;[39m
+ [90m 13 |[39m 
+[36mimport[39m 
+[33mBenefits[39m 
+[36mfrom[39m [32m'@/component
+s/Benefits'[39m[33m;[39m
+ [90m 14 |[39m 
+[36mimport[39m [33mFAQ[39m 
+[36mfrom[39m [32m'@/component
+s/FAQ'[39m[33m;[39m[0m
+
+Merge conflict marker 
+encountered.
+
+
+    at transform (turbopack:///[
+turbopack-node]/transforms/postc
+ss.ts:70:51) [C:\Users\iraquian\
+automateai-main\.next\build\chun
+ks\[root-of-the-server]__51225da
+f._.js:146:52])
+    at run (turbopack:///[turbop
+ack-node]/ipc/evaluate.ts:92:29)
+ [C:\Users\iraquian\automateai-m
+ain\.next\build\chunks\[root-of-
+the-server]__974941ed._.js:443:3
+7])
+    at <unknown> 
+(./app/page.tsx:29:2)
+    at <unknown> 
+(./app/page.tsx:29:4)
+    at <unknown> 
+(./app/page.tsx:5:1)
+    at <unknown> 
+(./app/page.tsx:8:1)
+    at <unknown> 
+(./app/page.tsx:11:1)

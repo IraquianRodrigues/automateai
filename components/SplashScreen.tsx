@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -10,7 +10,6 @@ export default function SplashScreen() {
     const timer = setTimeout(() => {
       setIsVisible(false);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -63,8 +62,7 @@ export default function SplashScreen() {
               transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }}
               className="w-40 h-1 bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] mx-auto mt-8 origin-left rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]"
             />
-          </div>
-        </motion.div>
+          </div>        </motion.div>
       )}
     </AnimatePresence>
   );

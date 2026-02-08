@@ -1,7 +1,6 @@
-'use client';
+﻿'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
 export default function ScrollToTop() {
@@ -13,8 +12,7 @@ export default function ScrollToTop() {
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    return () => window.removeEventListener('scroll', toggleVisibility);  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({

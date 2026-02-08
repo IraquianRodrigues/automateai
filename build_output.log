@@ -1,0 +1,45 @@
+﻿
+> automateai@0.1.0 build
+> next build
+
+node.exe : 
+[baseline-browser-mapping] The 
+data in this module is over two 
+months old.  To ensure accurate 
+Baseline data, please update: 
+`npm i 
+baseline-browser-mapping@latest 
+-D`
+No linha:1 caractere:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : N 
+   otSpecified: ([baseline-bro  
+  ws...ping@latest -D`:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorId : N 
+   ativeCommandError
+ 
+   Ôû▓ Next.js 16.0.10 (Turbopack)
+
+   Creating an optimized production build ...
+[baseline-browser-mapping] The 
+data in this module is over two 
+months old.  To ensure accurate 
+Baseline data, please update: 
+`npm i 
+baseline-browser-mapping@latest 
+-D`
+
+> Build error occurred
+RangeError: Invalid count 
+value: -2
+    at String.repeat 
+(<anonymous>) {
+  type: 'RangeError'
+}

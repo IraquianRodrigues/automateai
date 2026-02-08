@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { FaClock, FaChartLine, FaCheckCircle, FaExpand } from 'react-icons/fa';

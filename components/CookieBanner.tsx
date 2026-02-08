@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -8,10 +8,8 @@ export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if user has already accepted cookies
     const hasAccepted = localStorage.getItem('cookiesAccepted');
     if (!hasAccepted) {
-      // Show banner after a short delay
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 2500);

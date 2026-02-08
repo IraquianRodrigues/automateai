@@ -127,7 +127,7 @@ export default function About() {
                     <h3 className="text-lg font-bold text-white mb-2">
                       {value.title}
                     </h3>
-                    <p className="text-[#94a3b8] text-sm leading-relaxed">
+                    <p className="text-94a3b8 text-sm leading-relaxed">
                       {value.description}
                     </p>
                   </div>

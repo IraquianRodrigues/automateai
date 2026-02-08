@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { FaArrowRight, FaWhatsapp, FaRobot, FaBolt, FaCode } from "react-icons/fa";
@@ -87,7 +87,7 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Tech Stack Icons (Optional Trust Signals) */}
+            {/* Tech Stack Icons */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

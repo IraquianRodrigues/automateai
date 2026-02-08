@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { FaSearch, FaCode, FaRocket, FaHeadset } from 'react-icons/fa';
@@ -35,7 +35,6 @@ export default function HowItWorks() {
     <section id="como-funciona" className="py-24 bg-[#020617] relative overflow-hidden">
       {/* Vertical line accent */}
       <div className="absolute left-8 md:left-1/2 top-48 bottom-48 w-px bg-gradient-to-b from-transparent via-[#1e293b] to-transparent hidden md:block" />
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
