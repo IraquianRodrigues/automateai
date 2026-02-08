@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Features from '@/components/Features';
 import About from '@/components/About';
-import Dashboard from '@/components/Dashboard';
+
 import HowItWorks from '@/components/HowItWorks';
 import Benefits from '@/components/Benefits';
 import FAQ from '@/components/FAQ';
@@ -24,7 +24,7 @@ export default function Home() {
         <Services />
         <Features />
         <About />
-        <Dashboard />
+
         <HowItWorks />
         <Benefits />
         <FAQ />
