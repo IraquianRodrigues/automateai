@@ -1,0 +1,34 @@
+# robots.txt para AutomateAI
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seu-dominio.com.br/sitemap.xml
+
+# Páginas importantes
+Allow: /
+Allow: /#servicos
+Allow: /#sobre
+Allow: /#dashboard
+Allow: /#como-funciona
+Allow: /#beneficios
+Allow: /#faq
+Allow: /#contato
+
+# Desallow (quando tiver)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl-delay
+Crawl-delay: 1
+
+
+
+
+
+
+
+
+
+

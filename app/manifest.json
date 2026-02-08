@@ -1,0 +1,26 @@
+{
+  "name": "AutomateAI Tech Solutions",
+  "short_name": "AutomateAI",
+  "description": "Funcionários digitais que trabalham 24h pela sua empresa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#a855f7",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
