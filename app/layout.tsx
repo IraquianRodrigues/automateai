@@ -75,8 +75,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google Analytics - Substitua G-XXXXXXXXXX pelo seu ID */}
-        <GoogleAnalytics gaId="G-STFM7K17LC" />
+        {/* Google Analytics */}
+        <GoogleAnalytics gaId="G-BEJS454P74" />
         {children}
       </body>
     </html>
