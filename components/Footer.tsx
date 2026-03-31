@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -8,12 +8,12 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      title: 'Serviços',
+      title: 'Soluções',
       links: [
-        { name: 'Automação de Agendamentos', href: '#servicos' },
-        { name: 'Suporte WhatsApp', href: '#servicos' },
-        { name: 'Automação de Planilhas', href: '#servicos' },
-        { name: 'Soluções Personalizadas', href: '#servicos' },
+        { name: 'Automação de Agendamentos', href: '#solucoes' },
+        { name: 'CRM WhatsApp & Leads', href: '#solucoes' },
+        { name: 'Automação de Planilhas', href: '#solucoes' },
+        { name: 'Soluções Personalizadas', href: '#solucoes' },
       ],
     },
     {
@@ -21,7 +21,6 @@ export default function Footer() {
       links: [
         { name: 'Sobre Nós', href: '#sobre' },
         { name: 'Como Funciona', href: '#como-funciona' },
-        { name: 'Benefícios', href: '#beneficios' },
         { name: 'FAQ', href: '#faq' },
       ],
     },
@@ -43,10 +42,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#020617] border-t border-[#1e293b] relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#06b6d4]/5 rounded-full blur-[100px] pointer-events-none" />
-
+    <footer className="bg-[#0A0A0A] border-t border-[#262626] relative">
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand section */}
@@ -59,28 +55,26 @@ export default function Footer() {
             >
               {/* Logo */}
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#06b6d4] to-[#8b5cf6] p-[1px] mr-3">
-                   <div className="w-full h-full bg-[#020617] rounded-lg flex items-center justify-center">
-                      <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#06b6d4] to-[#8b5cf6] font-black text-xl">A</span>
-                   </div>
+                <div className="w-10 h-10 bg-[#FF6B00] flex items-center justify-center mr-3">
+                  <span className="text-[#0A0A0A] font-black text-xl font-[family-name:var(--font-space-grotesk)]">A</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight">
-                    Automate<span className="text-[#06b6d4]">AI</span>
+                  <h3 className="text-xl font-bold text-[#FAFAFA] tracking-tight font-[family-name:var(--font-space-grotesk)]">
+                    Automate<span className="text-[#FF6B00]">AI</span>
                   </h3>
-                  <p className="text-[10px] text-[#94a3b8] uppercase tracking-[0.2em] font-medium">
+                  <p className="text-[9px] text-[#737373] uppercase tracking-[0.25em] font-medium">
                     Tech Solutions
                   </p>
                 </div>
               </div>
-              
-              <p className="text-[#94a3b8] mb-8 leading-relaxed max-w-sm">
-                Transformando negócios através de automação inteligente. 
+
+              <p className="text-[#A3A3A3] mb-8 leading-relaxed max-w-sm">
+                Transformando negócios através de automação inteligente.
                 Funcionários digitais trabalhando 24h para você.
               </p>
-              
+
               {/* Social links */}
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
@@ -90,7 +84,7 @@ export default function Footer() {
                     aria-label={social.label}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 rounded-lg border border-[#1e293b] bg-[#0f172a] flex items-center justify-center text-[#94a3b8] hover:border-[#06b6d4] hover:text-[#06b6d4] transition-all duration-300"
+                    className="w-10 h-10 border border-[#262626] bg-[#141414] flex items-center justify-center text-[#A3A3A3] hover:border-[#FF6B00] hover:text-[#FF6B00] transition-all duration-300"
                   >
                     <social.icon className="text-lg" />
                   </motion.a>
@@ -108,7 +102,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">
+              <h4 className="text-[#FAFAFA] font-bold mb-4 text-sm uppercase tracking-wider">
                 {section.title}
               </h4>
               <ul className="space-y-3">
@@ -116,7 +110,7 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <a
                       href={link.href}
-                      className="text-[#94a3b8] hover:text-[#06b6d4] transition-colors duration-200 text-sm"
+                      className="text-[#A3A3A3] hover:text-[#FF6B00] transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -128,23 +122,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-[#1e293b]">
+        <div className="pt-8 border-t border-[#262626]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#64748b] text-sm text-center md:text-left">
+            <p className="text-[#737373] text-sm text-center md:text-left">
               © {currentYear} AutomateAI Tech Solutions. Todos os direitos reservados.
             </p>
-            
+
             <div className="flex gap-6 text-sm">
-              <a href="/privacidade" className="text-[#64748b] hover:text-[#06b6d4] transition-colors duration-200">
+              <a href="/privacidade" className="text-[#737373] hover:text-[#FF6B00] transition-colors duration-200">
                 Política de Privacidade
               </a>
             </div>
           </div>
         </div>
 
-        {/* Made with - minimal */}
+        {/* Location */}
         <div className="text-center mt-8">
-          <p className="text-[#334155] text-xs font-mono">
+          <p className="text-[#363636] text-xs font-mono">
             Mossoró-RN • Brasil
           </p>
         </div>

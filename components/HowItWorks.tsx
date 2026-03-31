@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { FaSearch, FaCode, FaRocket, FaHeadset } from 'react-icons/fa';
@@ -32,9 +32,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 bg-[#020617] relative overflow-hidden">
-      {/* Vertical line accent */}
-      <div className="absolute left-8 md:left-1/2 top-48 bottom-48 w-px bg-gradient-to-b from-transparent via-[#1e293b] to-transparent hidden md:block" />
+    <section id="como-funciona" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
@@ -42,73 +40,61 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20 max-w-2xl"
+          className="mb-20 max-w-3xl"
         >
-          <span className="text-[#8b5cf6] font-mono text-sm uppercase tracking-widest mb-4 block">
-            // Processo
+          <span className="text-[#FF6B00] font-mono text-sm uppercase tracking-widest mb-4 block">
+            &#47;&#47; Processo
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FAFAFA] mb-6 leading-tight font-[family-name:var(--font-space-grotesk)]">
             Como funciona
           </h2>
-          <p className="text-xl text-[#94a3b8] leading-relaxed">
+          <p className="text-xl text-[#A3A3A3] leading-relaxed">
             Um processo simples e eficiente do início ao fim.
           </p>
         </motion.div>
 
-        {/* Steps - Vertical timeline on desktop, stacked on mobile */}
-        <div className="max-w-4xl mx-auto">
+        {/* Steps — Horizontal on desktop, vertical on mobile */}
+        <div className="grid md:grid-cols-4 gap-0">
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative flex items-stretch gap-8 mb-8 last:mb-0 ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}
+              className="group relative"
             >
-              {/* Number - Large display */}
-              <div className="hidden md:flex items-center justify-center w-32 flex-shrink-0">
-                <span className="text-7xl font-black text-[#0f172a] drop-shadow-sm">
-                  {step.number}
-                </span>
-              </div>
+              {/* Connecting line (desktop) */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-[calc(50%+24px)] right-0 h-px bg-[#262626] z-0" />
+              )}
 
-              {/* Timeline dot */}
-              <div className="hidden md:flex flex-col items-center">
-                <div className={`w-4 h-4 rounded-full flex-shrink-0 ${
-                  index % 2 === 0 ? 'bg-[#06b6d4]' : 'bg-[#8b5cf6]'
-                } shadow-[0_0_10px_currentColor]`} />
-                {index < steps.length - 1 && (
-                  <div className="w-px flex-1 bg-[#1e293b]" />
-                )}
-              </div>
-
-              {/* Content card */}
-              <div className="flex-1 bg-[#0f172a]/50 backdrop-blur-sm border border-[#1e293b] p-6 rounded-2xl group hover:border-[#8b5cf6]/30 transition-colors duration-300 shadow-lg">
-                {/* Mobile number */}
-                <span className="md:hidden text-5xl font-black text-[#1e293b] float-right ml-4 -mt-1">
+              <div className="relative z-10 p-6 md:p-8">
+                {/* Number — Large */}
+                <div className="text-6xl md:text-7xl font-black text-[#1A1A1A] group-hover:text-[#FF6B00]/20 transition-colors duration-500 font-[family-name:var(--font-space-grotesk)] mb-4">
                   {step.number}
-                </span>
-                
-                {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 transition-colors duration-300 ${
-                  index % 2 === 0 
-                    ? 'border-[#06b6d4]/30 bg-[#06b6d4]/10 text-[#06b6d4] group-hover:bg-[#06b6d4] group-hover:text-white' 
-                    : 'border-[#8b5cf6]/30 bg-[#8b5cf6]/10 text-[#8b5cf6] group-hover:bg-[#8b5cf6] group-hover:text-white'
-                }`}>
-                  <step.icon className="text-xl transition-colors duration-300" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-3">
+                {/* Icon */}
+                <div className="w-12 h-12 bg-[#141414] border border-[#262626] flex items-center justify-center mb-4 group-hover:border-[#FF6B00]/50 group-hover:bg-[#FF6B00]/10 transition-all duration-300">
+                  <step.icon className="text-xl text-[#A3A3A3] group-hover:text-[#FF6B00] transition-colors duration-300" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-[#FAFAFA] mb-3 font-[family-name:var(--font-space-grotesk)]">
                   {step.title}
                 </h3>
 
-                <p className="text-[#94a3b8] leading-relaxed">
+                {/* Description */}
+                <p className="text-[#A3A3A3] leading-relaxed text-sm">
                   {step.description}
                 </p>
               </div>
+
+              {/* Connecting line (mobile) */}
+              {index < steps.length - 1 && (
+                <div className="md:hidden w-px h-8 bg-[#262626] mx-auto" />
+              )}
             </motion.div>
           ))}
         </div>
@@ -123,7 +109,7 @@ export default function HowItWorks() {
         >
           <a
             href="#contato"
-            className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] text-white font-bold text-lg hover:shadow-[0_0_20px_-5px_rgba(139,92,246,0.6)] transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center px-8 py-4 bg-[#FF6B00] text-[#0A0A0A] font-bold text-lg hover:bg-[#FF8533] transition-all duration-300"
           >
             Comece Sua Transformação
           </a>

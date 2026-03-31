@@ -1,158 +1,125 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaCheck, FaLightbulb, FaUsers, FaChartLine } from 'react-icons/fa';
-
-const values = [
-  {
-    icon: FaLightbulb,
-    title: 'Acessibilidade',
-    description: 'Tecnologia dos grandes centros adaptada para negócios locais',
-    color: '#06b6d4',
-  },
-  {
-    icon: FaUsers,
-    title: 'Abordagem Consultiva',
-    description: 'Analisamos suas dores e criamos soluções sob medida',
-    color: '#8b5cf6',
-  },
-  {
-    icon: FaChartLine,
-    title: 'Parceiro Estratégico',
-    description: 'Não vendemos serviços, construímos parcerias de crescimento',
-    color: '#ec4899',
-  },
-];
+import { FaCheck } from 'react-icons/fa';
 
 const keyPoints = [
   'Funcionários digitais trabalhando 24h pela sua empresa',
-  'Automação acessível e personalizada',
-  'Análise consultiva das dores do seu negócio',
-  'Foco em colocar sua empresa no piloto automático',
+  'Automação acessível e personalizada para cada negócio',
+  'Análise consultiva das dores da sua operação',
+  'Tecnologia dos grandes centros para negócios locais',
 ];
 
 export default function About() {
   return (
-    <section id="sobre" className="py-24 bg-[#0f172a] relative overflow-hidden">
+    <section id="sobre" className="py-24 bg-[#141414] relative overflow-hidden">
       {/* Large background text */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 pointer-events-none select-none opacity-5">
-        <span className="text-[20rem] font-black text-white leading-none">
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 pointer-events-none select-none opacity-[0.03]">
+        <span className="text-[20rem] font-black text-[#FAFAFA] leading-none font-[family-name:var(--font-space-grotesk)]">
           AI
         </span>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Asymmetric layout */}
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Left side - Main content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+        {/* Section label */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-[#FF6B00] font-mono text-sm uppercase tracking-widest mb-4 block">
+            &#47;&#47; Sobre Nós
+          </span>
+        </motion.div>
+
+        {/* Vertical narrative — NOT split layout */}
+        <div className="max-w-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FAFAFA] mb-10 leading-tight font-[family-name:var(--font-space-grotesk)]"
           >
-            <span className="text-[#8b5cf6] font-mono text-sm uppercase tracking-widest mb-4 block">
-              // Sobre Nós
-            </span>
-            
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Transformamos processos manuais em{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]">eficiência digital</span>
-            </h2>
-            
-            <div className="space-y-6 text-lg text-[#94a3b8] leading-relaxed mb-10">
-              <p>
-                A AutomateAI é especializada em criar{' '}
-                <span className="text-white font-semibold">"funcionários digitais"</span> que 
-                trabalham 24h por dia pela sua empresa. Atuamos na intersecção entre 
-                negócios e tecnologia.
-              </p>
-              <p>
-                Oferecemos uma abordagem consultiva: analisamos as dores da sua operação 
-                e desenvolvemos soluções sob medida — desde o atendimento automático 
-                no WhatsApp até a gestão inteligente de dados.
-              </p>
-              <p className="text-[#64748b] text-base italic border-l-2 border-[#1e293b] pl-4">
-                Fundada em 2025 em Mossoró-RN. Consultoria nativa digital focada em trazer 
-                a tecnologia dos grandes centros para os negócios locais.
-              </p>
-            </div>
+            Transformamos processos manuais em{' '}
+            <span className="text-gradient-brand">eficiência digital</span>
+          </motion.h2>
 
-            {/* Key points */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {keyPoints.map((point, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-3"
-                >
-                  <div className="w-5 h-5 rounded-full bg-[#06b6d4]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <FaCheck className="text-xs text-[#06b6d4]" />
-                  </div>
-                  <span className="text-[#f1f5f9] text-sm">{point}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Right side - Value cards */}
+          {/* Main paragraphs */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 space-y-4"
+            className="space-y-6 text-lg text-[#A3A3A3] leading-relaxed mb-12"
           >
-            {values.map((value, index) => (
+            <p>
+              A AutomateAI é especializada em criar{' '}
+              <span className="text-[#FAFAFA] font-semibold">&quot;funcionários digitais&quot;</span> que
+              trabalham 24h por dia pela sua empresa. Atuamos na intersecção entre
+              negócios e tecnologia, tornando a automação acessível para todos.
+            </p>
+            <p>
+              Oferecemos uma abordagem consultiva: analisamos as dores da sua operação
+              e desenvolvemos soluções sob medida — desde o atendimento automático
+              no WhatsApp até a gestão inteligente de dados e agendamentos.
+            </p>
+          </motion.div>
+
+          {/* Manifesto quote */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="border-l-2 border-[#FF6B00] pl-6 mb-12"
+          >
+            <p className="text-[#737373] text-base italic">
+              Fundada em 2025 em Mossoró-RN. Consultoria nativa digital focada em trazer
+              a tecnologia dos grandes centros para os negócios locais.
+            </p>
+          </motion.div>
+
+          {/* Key points */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid sm:grid-cols-2 gap-4"
+          >
+            {keyPoints.map((point, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                className="bg-[#020617] border border-[#1e293b] p-6 rounded-xl group hover:border-[#06b6d4]/30 transition-all duration-300 shadow-lg"
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                className="flex items-start gap-3"
               >
-                <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl border flex items-center justify-center transition-colors duration-300 bg-[#0f172a]"
-                    style={{ borderColor: `${value.color}40` }}
-                  >
-                    <value.icon className="text-xl transition-colors duration-300" style={{ color: value.color }} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">
-                      {value.title}
-                    </h3>
-                    <p className="text-94a3b8 text-sm leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
+                <div className="w-5 h-5 bg-[#FF6B00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <FaCheck className="text-[10px] text-[#FF6B00]" />
                 </div>
+                <span className="text-[#FAFAFA] text-sm">{point}</span>
               </motion.div>
             ))}
+          </motion.div>
 
-            {/* CTA box */}
-            <div className="relative overflow-hidden rounded-xl p-6 mt-6 bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]">
-              <div className="absolute inset-0 bg-black/10" />
-              <div className="relative z-10">
-                <p className="text-white font-bold text-lg mb-2">
-                  Pronto para automatizar?
-                </p>
-                <p className="text-white/90 text-sm mb-4">
-                  Converse com nossa equipe e descubra como podemos ajudar.
-                </p>
-                <a 
-                  href="#contato"
-                  className="inline-block px-6 py-2 bg-white text-[#020617] rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors shadow-lg"
-                >
-                  Falar com Especialista
-                </a>
-              </div>
-            </div>
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-12"
+          >
+            <a
+              href="#contato"
+              className="inline-flex items-center px-8 py-4 bg-[#FF6B00] text-[#0A0A0A] font-bold text-lg hover:bg-[#FF8533] transition-all duration-300"
+            >
+              Falar com Especialista
+            </a>
           </motion.div>
         </div>
       </div>

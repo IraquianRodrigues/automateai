@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -23,9 +23,9 @@ export default function Contact() {
     e.preventDefault();
     setIsLoading(true);
     setSubmitStatus('idle');
-    
+
     analytics.formSubmit('Contact Form - ' + formData.service);
-    
+
     if (sendMethod === 'email') {
       try {
         const result = await emailjs.send(
@@ -51,7 +51,6 @@ export default function Contact() {
         setSubmitStatus('error');
       }
     } else {
-      // Enviar por WHATSAPP
       const whatsappMessage = `
 Olá! Vim através do site AutomateAI.
 
@@ -61,16 +60,16 @@ Olá! Vim através do site AutomateAI.
 *Serviço de interesse:* ${formData.service}
 *Mensagem:* ${formData.message}
       `.trim();
-      
+
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappUrl = `https://wa.me/5584996735293?text=${encodedMessage}`;
-      
+
       analytics.whatsappClick('Contact Form');
-      
+
       window.open(whatsappUrl, '_blank');
       setSubmitStatus('success');
     }
-    
+
     setIsLoading(false);
   };
 
@@ -87,19 +86,19 @@ Olá! Vim através do site AutomateAI.
       title: 'WhatsApp',
       content: '+55 (84) 99673-5293',
       link: 'https://wa.me/5584996735293',
-      color: '#25D366'
     },
     {
       icon: FaEnvelope,
       title: 'Email',
       content: 'automateai@workflown8n.com.br',
       link: 'mailto:automateai@workflown8n.com.br',
-      color: '#06b6d4'
     },
   ];
 
+  const inputClasses = "w-full px-4 py-3 bg-[#141414] border border-[#262626] text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF6B00] transition-colors duration-300";
+
   return (
-    <section id="contato" className="py-24 bg-[#020617] relative">
+    <section id="contato" className="py-24 bg-[#141414] relative">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <motion.div
@@ -109,13 +108,13 @@ Olá! Vim através do site AutomateAI.
           transition={{ duration: 0.6 }}
           className="mb-16 max-w-2xl"
         >
-          <span className="text-[#06b6d4] font-mono text-sm uppercase tracking-widest mb-4 block">
-            // Contato
+          <span className="text-[#FF6B00] font-mono text-sm uppercase tracking-widest mb-4 block">
+            &#47;&#47; Contato
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FAFAFA] mb-6 leading-tight font-[family-name:var(--font-space-grotesk)]">
             Vamos conversar?
           </h2>
-          <p className="text-xl text-[#94a3b8] leading-relaxed">
+          <p className="text-xl text-[#A3A3A3] leading-relaxed">
             Entre em contato e descubra como podemos transformar seu negócio.
           </p>
         </motion.div>
@@ -127,44 +126,38 @@ Olá! Vim através do site AutomateAI.
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 space-y-4"
           >
-            {/* Contact cards */}
-            <div className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <motion.a
-                  key={index}
-                  href={info.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-4 p-5 bg-[#0f172a] border border-[#1e293b] rounded-xl hover:border-[#06b6d4]/50 transition-colors duration-300 group shadow-lg"
-                >
-                  <div 
-                    className="w-12 h-12 rounded-lg border flex items-center justify-center transition-colors duration-300 bg-[#020617]"
-                    style={{ borderColor: `${info.color}40`, color: info.color }}
-                  >
-                    <info.icon className="text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-[#94a3b8] text-sm">{info.title}</p>
-                    <p className="text-white font-semibold">{info.content}</p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
+            {contactInfo.map((info, index) => (
+              <motion.a
+                key={index}
+                href={info.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="flex items-center gap-4 p-5 bg-[#0A0A0A] border border-[#262626] hover:border-[#FF6B00]/50 transition-colors duration-300 group"
+              >
+                <div className="w-12 h-12 border border-[#262626] bg-[#141414] flex items-center justify-center text-[#FF6B00] group-hover:bg-[#FF6B00]/10 transition-colors duration-300">
+                  <info.icon className="text-xl" />
+                </div>
+                <div>
+                  <p className="text-[#A3A3A3] text-sm">{info.title}</p>
+                  <p className="text-[#FAFAFA] font-semibold">{info.content}</p>
+                </div>
+              </motion.a>
+            ))}
 
             {/* Location */}
-            <div className="p-6 bg-[#0f172a] border-l-4 border-[#06b6d4] rounded-r-xl shadow-lg">
+            <div className="p-6 bg-[#0A0A0A] border-l-2 border-[#FF6B00]">
               <div className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-xl text-[#06b6d4] flex-shrink-0 mt-1" />
+                <FaMapMarkerAlt className="text-xl text-[#FF6B00] flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white font-semibold mb-1">Localização</p>
-                  <p className="text-[#94a3b8]">Mossoró - RN</p>
-                  <p className="text-[#64748b] text-sm mt-1">Atendimento em todo Brasil</p>
+                  <p className="text-[#FAFAFA] font-semibold mb-1">Localização</p>
+                  <p className="text-[#A3A3A3]">Mossoró - RN</p>
+                  <p className="text-[#737373] text-sm mt-1">Atendimento em todo Brasil</p>
                 </div>
               </div>
             </div>
@@ -181,36 +174,36 @@ Olá! Vim através do site AutomateAI.
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Send method selector */}
               <div>
-                <label className="block text-white font-semibold mb-3">
+                <label className="block text-[#FAFAFA] font-semibold mb-3">
                   Como deseja receber a resposta?
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     type="button"
                     onClick={() => setSendMethod('email')}
-                    className={`p-4 border-2 rounded-xl transition-all duration-300 flex flex-col items-center gap-2 ${
+                    className={`p-4 border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
                       sendMethod === 'email'
-                        ? 'border-[#06b6d4] bg-[#06b6d4]/10'
-                        : 'border-[#1e293b] bg-[#0f172a] hover:border-[#334155]'
+                        ? 'border-[#FF6B00] bg-[#FF6B00]/10'
+                        : 'border-[#262626] bg-[#0A0A0A] hover:border-[#363636]'
                     }`}
                   >
-                    <FaEnvelope className={`text-2xl ${sendMethod === 'email' ? 'text-[#06b6d4]' : 'text-[#64748b]'}`} />
-                    <span className={`font-semibold ${sendMethod === 'email' ? 'text-white' : 'text-[#64748b]'}`}>
+                    <FaEnvelope className={`text-2xl ${sendMethod === 'email' ? 'text-[#FF6B00]' : 'text-[#737373]'}`} />
+                    <span className={`font-semibold ${sendMethod === 'email' ? 'text-[#FAFAFA]' : 'text-[#737373]'}`}>
                       Email
                     </span>
                   </button>
-                  
+
                   <button
                     type="button"
                     onClick={() => setSendMethod('whatsapp')}
-                    className={`p-4 border-2 rounded-xl transition-all duration-300 flex flex-col items-center gap-2 ${
+                    className={`p-4 border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
                       sendMethod === 'whatsapp'
-                        ? 'border-[#25D366] bg-[#25D366]/10'
-                        : 'border-[#1e293b] bg-[#0f172a] hover:border-[#334155]'
+                        ? 'border-[#22C55E] bg-[#22C55E]/10'
+                        : 'border-[#262626] bg-[#0A0A0A] hover:border-[#363636]'
                     }`}
                   >
-                    <FaWhatsapp className={`text-2xl ${sendMethod === 'whatsapp' ? 'text-[#25D366]' : 'text-[#64748b]'}`} />
-                    <span className={`font-semibold ${sendMethod === 'whatsapp' ? 'text-white' : 'text-[#64748b]'}`}>
+                    <FaWhatsapp className={`text-2xl ${sendMethod === 'whatsapp' ? 'text-[#22C55E]' : 'text-[#737373]'}`} />
+                    <span className={`font-semibold ${sendMethod === 'whatsapp' ? 'text-[#FAFAFA]' : 'text-[#737373]'}`}>
                       WhatsApp
                     </span>
                   </button>
@@ -222,14 +215,14 @@ Olá! Vim através do site AutomateAI.
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-[#25D366]/10 border border-[#25D366] rounded-xl flex items-center gap-3"
+                  className="p-4 bg-[#22C55E]/10 border border-[#22C55E] flex items-center gap-3"
                 >
-                  <FaCheckCircle className="text-[#25D366] text-xl flex-shrink-0" />
+                  <FaCheckCircle className="text-[#22C55E] text-xl flex-shrink-0" />
                   <div>
-                    <p className="text-[#25D366] font-semibold">
+                    <p className="text-[#22C55E] font-semibold">
                       {sendMethod === 'email' ? 'Email enviado!' : 'Abrindo WhatsApp...'}
                     </p>
-                    <p className="text-[#25D366]/70 text-sm">
+                    <p className="text-[#22C55E]/70 text-sm">
                       {sendMethod === 'email' ? 'Responderemos em breve.' : 'Continue no WhatsApp.'}
                     </p>
                   </div>
@@ -240,12 +233,12 @@ Olá! Vim através do site AutomateAI.
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-[#DC2626]/10 border border-[#DC2626] rounded-xl flex items-center gap-3"
+                  className="p-4 bg-[#EF4444]/10 border border-[#EF4444] flex items-center gap-3"
                 >
-                  <FaExclamationCircle className="text-[#DC2626] text-xl flex-shrink-0" />
+                  <FaExclamationCircle className="text-[#EF4444] text-xl flex-shrink-0" />
                   <div>
-                    <p className="text-[#DC2626] font-semibold">Erro ao enviar</p>
-                    <p className="text-[#DC2626]/70 text-sm">Tente novamente ou use o WhatsApp.</p>
+                    <p className="text-[#EF4444] font-semibold">Erro ao enviar</p>
+                    <p className="text-[#EF4444]/70 text-sm">Tente novamente ou use o WhatsApp.</p>
                   </div>
                 </motion.div>
               )}
@@ -253,70 +246,30 @@ Olá! Vim através do site AutomateAI.
               {/* Form fields */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-white font-semibold mb-2">
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg text-white placeholder-[#64748b] focus:outline-none focus:border-[#06b6d4] transition-colors duration-300"
-                    placeholder="Seu nome"
-                  />
+                  <label htmlFor="name" className="block text-[#FAFAFA] font-semibold mb-2">Nome</label>
+                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange}
+                    className={inputClasses} placeholder="Seu nome" />
                 </div>
-
                 <div>
-                  <label htmlFor="email" className="block text-white font-semibold mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg text-white placeholder-[#64748b] focus:outline-none focus:border-[#06b6d4] transition-colors duration-300"
-                    placeholder="seu@email.com"
-                  />
+                  <label htmlFor="email" className="block text-[#FAFAFA] font-semibold mb-2">Email</label>
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange}
+                    className={inputClasses} placeholder="seu@email.com" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="phone" className="block text-white font-semibold mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg text-white placeholder-[#64748b] focus:outline-none focus:border-[#06b6d4] transition-colors duration-300"
-                    placeholder="(XX) XXXXX-XXXX"
-                  />
+                  <label htmlFor="phone" className="block text-[#FAFAFA] font-semibold mb-2">Telefone</label>
+                  <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleChange}
+                    className={inputClasses} placeholder="(XX) XXXXX-XXXX" />
                 </div>
-
                 <div>
-                  <label htmlFor="service" className="block text-white font-semibold mb-2">
-                    Serviço
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg text-white focus:outline-none focus:border-[#06b6d4] transition-colors duration-300"
-                  >
+                  <label htmlFor="service" className="block text-[#FAFAFA] font-semibold mb-2">Serviço</label>
+                  <select id="service" name="service" required value={formData.service} onChange={handleChange}
+                    className={inputClasses}>
                     <option value="">Selecione</option>
                     <option value="Automação de Agendamentos">Automação de Agendamentos</option>
-                    <option value="Suporte WhatsApp & Leads">Suporte WhatsApp & Leads</option>
+                    <option value="CRM WhatsApp & Leads">CRM WhatsApp & Leads</option>
                     <option value="Automação de Planilhas">Automação de Planilhas</option>
                     <option value="Solução Personalizada">Solução Personalizada</option>
                     <option value="Outros">Outros</option>
@@ -325,30 +278,20 @@ Olá! Vim através do site AutomateAI.
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-semibold mb-2">
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg text-white placeholder-[#64748b] focus:outline-none focus:border-[#06b6d4] transition-colors duration-300 resize-none"
-                  placeholder="Conte-nos mais sobre sua necessidade..."
-                />
+                <label htmlFor="message" className="block text-[#FAFAFA] font-semibold mb-2">Mensagem</label>
+                <textarea id="message" name="message" required rows={4} value={formData.message} onChange={handleChange}
+                  className={`${inputClasses} resize-none`} placeholder="Conte-nos mais sobre sua necessidade..." />
               </div>
 
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`w-full px-8 py-4 font-bold text-lg rounded-xl transition-all duration-300 flex items-center justify-center gap-2 ${
+                className={`w-full px-8 py-4 font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
                   isLoading
-                    ? 'bg-[#1e293b] text-[#64748b] cursor-not-allowed'
+                    ? 'bg-[#262626] text-[#737373] cursor-not-allowed'
                     : sendMethod === 'email'
-                    ? 'bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6] text-white hover:shadow-[0_0_20px_-5px_rgba(6,182,212,0.6)]'
-                    : 'bg-[#25D366] text-[#020617] hover:bg-[#22c55e]'
+                    ? 'bg-[#FF6B00] text-[#0A0A0A] hover:bg-[#FF8533]'
+                    : 'bg-[#22C55E] text-[#0A0A0A] hover:bg-[#16A34A]'
                 }`}
               >
                 {isLoading ? (
@@ -356,7 +299,7 @@ Olá! Vim através do site AutomateAI.
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                      className="w-5 h-5 border-2 border-[#64748b] border-t-transparent rounded-full"
+                      className="w-5 h-5 border-2 border-[#737373] border-t-transparent rounded-full"
                     />
                     Enviando...
                   </>
