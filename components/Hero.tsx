@@ -3,6 +3,11 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { FaArrowRight, FaWhatsapp } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
+
+const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), {
+  ssr: false,
+});
 
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
   const count = useMotionValue(0);
@@ -41,6 +46,9 @@ export default function Hero() {
         {/* Subtle orange accent glow — bottom */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF6B00]/5 blur-[150px] rounded-full" />
       </div>
+
+      {/* Particles */}
+      <ParticlesBackground />
 
       <div className="container mx-auto px-4 relative z-10 py-16 md:py-24">
         {/* Status Badge */}
